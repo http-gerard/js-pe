@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulier</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"></link>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/validation.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+    
+    <div class="container mt-5">
+        <h1>Registeer</h1>
+    <p>Meld je aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
+           
+        <form name="myForm" method="post" onsubmit="return validateForm()" >
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputVoornaam">Voornaam</label>
+                <input type="text" class="form-control" name="voornaam" id="inputVoornaam" placeholder="Uw voornaam">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputNaam">Naam</label>
+                <input type="text" class="form-control" name="naam" id="inputNaam" placeholder="Uw naam">
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputGebruikersNaam">Gebruikersnaam</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control" name="gebruikersnaam" id="InputGebruikrsnaam" placeholder="u911236">
+      </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlInput1">E-mailadres</label>
+                    <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="mail@example.com">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputWachtwoord">Wachtwoord</label>
+                  <input name="wachtwoord" type="text" class="form-control" id="inputWachtwoord">
+                  <small id="WachtwoordHelp" class="form-text text-muted">Je wachtwoord moet minstens 8 tekens lang zijn.</small>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputWachtwoord2">Herhaal wachtwoord</label>
+                  <input name="wachtwoord2" type="text" class="form-control" id="inputWachtwoord2">
+                </div>
+              </div>
+            <div class="form-group">
+              <label for="inputAddress">Addres</label>
+              <input type="text" class="form-control" name="adres" id="inputAddress" placeholder="Uw adres en huisnummer">
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputLand">Land</label>
+                <select name="land" id="inputLand" class="form-control">
+                  <option selected>Kies een land</option>
+                  <option>Belgie</option>
+                  <option>Frankrijk</option>
+                  <option>Nederland</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputProvincie">Provincie</label>
+                <select name="provincie" id="inputProvincie" class="form-control">
+                  <option selected>Kies een provincie</option>
+                  <option>Antwerpen</option>
+                  <option>Friesland</option>
+                  <option>Brussel</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputPostcode">Postcode</label>
+                <input type="text" class="form-control" id="inputPostcode">
+              </div>
+              
+              
+
+              <div class="form-row">
+                <div class="form-group col-6">
+                    <h2>Hou me op de hoogte</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckNieuwsbrief">
+                        <label class="form-check-label" for="flexCheckNieuwsbrief">
+                          Inschrijven van onze nieuwsbrief
+                        </label>
+                        </div>
+                        <div>
+                            <div class="form-check"> 
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckVoorwaarden">
+                        <label class="form-check-label" for="flexCheckVoorwaarden">
+                            Ik ga akkoord met de voorwaarden
+                          </label>
+                          </div>
+                      </div>
+                </div>
+                <div class="form-group col-6">
+                    <h2>Betaling</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="RadioBanking">
+                        <label class="form-check-label" for="RadioBanking">
+                          Banking app
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="RadioOverschrijving">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Overschrijving
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="RadioVisa">
+                        <label class="form-check-label" for="RadioVisa">
+                          Visa card
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="RadioPayPal">
+                        <label class="form-check-label" for="RadioPayPal">
+                          PayPal
+                        </label>
+                      </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Wave your magic wand</button>
+            </div>
+          </form>
+        <div style="display: none" id="errorDiv">
+            <h3>Yikes, errors..</h3>
+        </div>
+        <div style="display: none" id="formValid">
+            <h3>Goed gedaan!</h3>
+            <p>aw yeah, je werd geregistreerd.</p>
+        </div>
+        <div style="display: none" id="betalingswijze">
+            <h3>Betalingswijze</h3>
+        </div>
+    </div>
+</body>
+</html>
