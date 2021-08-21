@@ -14,12 +14,12 @@
 
 </head>
 <body>
-
-    
     <div class="container mt-5">
+      <div class="row">
+      <div class="col-8">
         <h1>Registeer</h1>
     <p>Meld je aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
-           
+        
         <form name="myForm" method="post" onsubmit="return validateForm()" >
             <div class="form-row">
               <div class="form-group col-md-6">
@@ -109,25 +109,25 @@
                 <div class="form-group col-6">
                     <h2>Betaling</h2>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="RadioBanking">
+                        <input class="form-check-input" type="radio" value="Banking App" name="flexRadioDefault" id="RadioBanking">
                         <label class="form-check-label" for="RadioBanking">
                           Banking app
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="RadioOverschrijving">
+                        <input class="form-check-input" type="radio" value="Overschrijving" name="flexRadioDefault" id="RadioOverschrijving">
                         <label class="form-check-label" for="flexRadioDefault1">
                           Overschrijving
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="RadioVisa">
+                        <input class="form-check-input" type="radio" value="Visa" name="flexRadioDefault" id="RadioVisa">
                         <label class="form-check-label" for="RadioVisa">
                           Visa card
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="RadioPayPal">
+                        <input class="form-check-input" type="radio" value="Paypal" name="flexRadioDefault" id="RadioPayPal">
                         <label class="form-check-label" for="RadioPayPal">
                           PayPal
                         </label>
@@ -140,16 +140,20 @@
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Wave your magic wand</button>
             </div>
           </form>
-        <div style="display: none" id="errorDiv">
-            <h3>Yikes, errors..</h3>
         </div>
-        <div style="display: none" id="formValid">
-            <h3>Goed gedaan!</h3>
+        <div class="col">
+        <div  style="display: none" id="errorDiv">
+            <h4>Yikes, errors..</h4>
+        </div>
+        <div  style="display: none" id="formValid">
+            <h4>Goed gedaan!</h4>
             <p>aw yeah, je werd geregistreerd.</p>
         </div>
-        <div style="display: none" id="betalingswijze">
-            <h3>Betalingswijze</h3>
+        <div  style="display: none" id="betalingswijze">
+            <h4>Betalingswijze</h4>
         </div>
+      </div>
+      </div>
     </div>
 </body>
 </html>
